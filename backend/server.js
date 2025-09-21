@@ -40,8 +40,8 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import authRoutes from './routes/auth.js';
-import transactionRoutes from './routes/transactions.js';
+import authRoutes from './api/auth.js';
+import transactionRoutes from './api/transactions.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -56,6 +56,7 @@ app.use(bodyParser.json());
 
 // Serve frontend files (make sure path is correct)
 const frontendPath = path.join(__dirname, '../frontend'); // backend/frontend
+// Serve frontend files
 app.use(express.static(frontendPath));
 
 // API routes
@@ -63,10 +64,10 @@ app.use('/api/auth', authRoutes);
 app.use('/api/transactions', transactionRoutes);
 
 // Fallback to index.html for SPA
-app.get('*', (req, res) => {
+app.use((req, res) => {
   res.sendFile(path.join(frontendPath, 'index.html'));
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on port http://localhost:${PORT}`);
 });
