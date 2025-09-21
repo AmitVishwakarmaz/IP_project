@@ -1,0 +1,138 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header, footer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Balance Section */
+.balance-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#balance {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Summary Section */
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.summary div {
+  flex: 1;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+}
+.income {
+  background: #d1f7d6;
+}
+.expense {
+  background: #f8d7da;
+}
+
+/* Transaction Form */
+.transaction-form {
+  margin-bottom: 20px;
+}
+.transaction-form form {
+  display: flex;
+  flex-direction: column;
+}
+.transaction-form input, .transaction-form select {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+}
+.transaction-form button {
+  padding: 10px;
+  border: none;
+  background: #3498db;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.transaction-form button:hover {
+  background: #2980b9;
+}
+
+/* Transaction History */
+.history ul {
+  list-style: none;
+}
+.history li {
+  background: #f1f1f1;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.history li.income {
+  border-left: 6px solid green;
+}
+.history li.expense {
+  border-left: 6px solid red;
+}
+.delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Chart */
+.chart-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.logout-btn {
+  margin-top: 10px;
+  padding: 6px 12px;
+  border: none;
+  background: #e74c3c;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.logout-btn:hover {
+  background: #c0392b;
+}
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+  <h1>Expense Tracker</h1>
+  <button id="logoutBtn" class="logout-btn">Logout</button>
+</header>
+
+  <main>
+    <!-- Balance Section -->
+    <section class="balance-section">
+      <h2>Your Balance</h2>
+      <p id="balance">₹0</p>
+    </section>
+
+    <!-- Income & Expense Summary -->
+    <section class="summary">
+      <div class="income">
+        <h3>Total Income</h3>
+        <p id="income">₹0</p>
+      </div>
+      <div class="expense">
+        <h3>Total Expense</h3>
+        <p id="expense">₹0</p>
+      </div>
+    </section>
+
+    <!-- Add Income -->
+    <section class="transaction-form">
+      <h2>Add Income</h2>
+      <form id="incomeForm">
+        <input type="text" id="incomeDesc" placeholder="Income Source" required>
+        <input type="number" id="incomeAmount" placeholder="Amount" required>
+        <button type="submit">Add Income</button>
+      </form>
+    </section>
+
+    <!-- Add Expense -->
+    <section class="transaction-form">
+      <h2>Add Expense</h2>
+      <form id="expenseForm">
+        <input type="text" id="expenseDesc" placeholder="Expense Description" required>
+        <input type="number" id="expenseAmount" placeholder="Amount" required>
+        <input type="date" id="expenseDate" required>
+        <select id="expenseCategory" required>
+          <option value="">Select Category</option>
+          <option value="Food">Food</option>
+          <option value="Transport">Transport</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Bills">Bills</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Other">Other</option>
+        </select>
+        <button type="submit">Add Expense</button>
+      </form>
+    </section>
+
+    <!-- Transaction History -->
+    <section class="history">
+      <h2>Transaction History</h2>
+      <ul id="transactionList"></ul>
+    </section>
+
+    <!-- Expense Chart -->
+    <section class="chart-section">
+      <h2>Expense Breakdown</h2>
+      <canvas id="expenseChart" width="400" height="400"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    <p>Expense Tracker © 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
