@@ -3,8 +3,8 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import authRoutes from './routes/auth.js';
-import transactionRoutes from './routes/transactions.js';
+import authRoutes from './api/auth.js';
+import transactionRoutes from './api/transactions.js';
 
 const app = express();
 const PORT = 5000;
